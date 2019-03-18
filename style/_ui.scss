@@ -1,0 +1,16 @@
+@import 'ui/buttons';
+@import 'ui/dashboardHeader';
+@import 'ui/form';
+@import 'ui/loader';
+@import 'ui/pageHeader';
+@import 'ui/pageBody';
+@import 'ui/sections';
+@import 'ui/tabs';
+@import 'ui/timeline';
+@import 'ui/titles';
+
+input[type='checkbox'],
+label[for]:not([for=''])
+{
+    cursor: pointer;
+}
