@@ -8,6 +8,13 @@
     height: 100%;
 }
 
+.ui-loader__page__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .ui-loader {
     display: block;
     position: relative;
