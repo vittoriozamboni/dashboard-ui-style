@@ -1,7 +1,7 @@
 @import "../colors";
 @import "../fonts";
 
-button:not(:first-of-type) {
+.button ~ .button {
     margin-left: 10px;
 }
 
@@ -14,6 +14,7 @@ button:not(:first-of-type) {
     background-color: $neutral-light-l2;
     padding: 7px 15px;
     cursor: pointer;
+    text-decoration: none;
     
     &:focus { outline: none; }
 
@@ -28,6 +29,14 @@ button:not(:first-of-type) {
     font-size: $text-small;
     padding: 6px 10px 4px;
     border-radius: 15px;
+}
+
+a.button.button--small {
+    padding: 7px 10px 6px;    
+}
+
+.button ~ .button.button--small {
+    margin-left: 7px;
 }
 
 .button--primary {
