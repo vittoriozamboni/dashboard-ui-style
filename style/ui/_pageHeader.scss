@@ -12,3 +12,15 @@
     margin-bottom: 1rem;
     color: $neutral-d1;
 }
+
+.page-header.ui-page-header__breadcrumb {
+    text-decoration: none;
+    color: $neutral-light-d2;
+
+    &:after {
+        content: ">";
+        margin-left: .3rem;
+        margin-right: .3rem;
+        text-decoration: none;        
+    }
+}
