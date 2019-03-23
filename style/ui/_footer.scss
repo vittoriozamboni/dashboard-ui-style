@@ -1,0 +1,17 @@
+@import '../colors';
+
+$dashboard-footer-height: 46px !default;
+
+.ui-footer__container {
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0;
+    height: $dashboard-footer-height;
+    background-color: $neutral-light-l1;
+    padding: 0 15px;
+}
