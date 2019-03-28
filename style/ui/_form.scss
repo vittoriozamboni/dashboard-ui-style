@@ -16,9 +16,12 @@ $ui-form-field-padding: 7px 0 !default;
     .ui-form__label { width: 200px; }
 }
 
+/** HORIZONTAL FIELDS (default) **/
+
 .ui-form__field {
     display: flex;
     padding: $ui-form-field-padding;    
+    align-items: center;
 }
 
 .ui-form__label {
@@ -26,17 +29,21 @@ $ui-form-field-padding: 7px 0 !default;
     display: inline-block;
 }
 
-.ui-form__input {
+.ui-form__field-input {
     display: inline-block;
 }
 
-.ui-form__field--inline {
+/** VERTICAL FIELDS (two lines) **/
+
+.ui-form__field--vertical {
     padding: $ui-form-field-padding;    
 }
 
-.ui-form__label--inline {
+.ui-form__label--vertical {
     color: $grey-d2;
 }
 
-.ui-form__input--inline {
+/*
+.ui-form__field-input--vertical {
 }
+*/
