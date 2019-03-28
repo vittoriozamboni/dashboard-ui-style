@@ -1,7 +1,9 @@
+$ui-page-padding: 15px !default;
+
 .page-header__container {
     border-bottom: 1px solid $neutral-light;
-    padding-left: $page-padding;
-    padding-right: $page-padding;
+    padding-left: $ui-page-padding;
+    padding-right: $ui-page-padding;
     display: flex;
     align-items: center;
     justify-content: space-between;
