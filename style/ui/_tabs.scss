@@ -18,6 +18,10 @@
 
 .ui-tabs__header-label:not(.ui-tabs__header-label--selected) {
     color: $neutral-light-d1;
+
+    &:hover {
+        color: $primary-l1;
+    }
 }
 
 .ui-tabs__content-container {}
