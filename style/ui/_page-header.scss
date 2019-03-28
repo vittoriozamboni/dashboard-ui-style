@@ -1,6 +1,6 @@
 $ui-page-padding: 15px !default;
 
-.page-header__container {
+.ui-page-header__container {
     border-bottom: 1px solid $neutral-light;
     padding-left: $ui-page-padding;
     padding-right: $ui-page-padding;
@@ -9,13 +9,13 @@ $ui-page-padding: 15px !default;
     justify-content: space-between;
 }
 
-.page-header {
+.ui-page-header {
     margin-top: 1rem;
     margin-bottom: 1rem;
     color: $neutral-d1;
 }
 
-.page-header.ui-page-header__breadcrumb {
+.ui-page-header.ui-page-header__breadcrumb {
     text-decoration: none;
     color: $neutral-light-d2;
 
