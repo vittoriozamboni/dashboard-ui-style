@@ -1,6 +1,6 @@
 @import '../colors';
 
-$dashboard-footer-height: 46px !default;
+$ui-dashboard-footer-height: 46px !default;
 
 .ui-footer__container {
     position: absolute;
@@ -11,7 +11,7 @@ $dashboard-footer-height: 46px !default;
     align-items: center;
     justify-content: space-between;
     bottom: 0;
-    height: $dashboard-footer-height;
+    height: $ui-dashboard-footer-height;
     background-color: $neutral-light-l1;
     padding: 0 15px;
 }
