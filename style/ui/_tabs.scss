@@ -1,6 +1,8 @@
 @import '../colors';
 
+/*
 .ui-tabs__container {}
+*/
 
 .ui-tabs__header-container {
     display: flex;
@@ -24,7 +26,9 @@
     }
 }
 
+/*
 .ui-tabs__content-container {}
+*/
 
 .ui-tabs__content {
     display: none;
