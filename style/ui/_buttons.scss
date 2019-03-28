@@ -1,11 +1,11 @@
 @import "../colors";
 @import "../fonts";
 
-.button ~ .button {
+.ui-button ~ .ui-button {
     margin-left: 10px;
 }
 
-.button {
+.ui-button {
     font-family: Lato;
     font-size: $text-standard;
     border: 1px solid $neutral-l2;
@@ -20,48 +20,48 @@
 
 }
 
-.button:hover {
+.ui-button:hover {
     color: $neutral-light-d2;
     border-color: $neutral-light;
 }
 
-.button.button--small {
+.ui-button.ui-button--small {
     font-size: $text-small;
     padding: 6px 10px 4px;
     border-radius: 15px;
 }
 
-a.button.button--small {
+a.ui-button.ui-button--small {
     padding: 7px 10px 6px;    
 }
 
-.button ~ .button.button--small {
+.ui-button ~ .ui-button.ui-button--small {
     margin-left: 7px;
 }
 
-.button--primary {
+.ui-button--primary {
     color: $neutral-light-l2;
     background-color: $primary;
 }
-.button--primary:hover {
+.ui-button--primary:hover {
     color: $neutral-light-l2;
     background-color: $primary-light-d2;
 }
 
-.button--positive {
+.ui-button--positive {
     color: $neutral-light-l2;
     background-color: $teal;
 }
-.button--positive:hover {
+.ui-button--positive:hover {
     color: $neutral-light-l2;
     background-color: $teal-light-d2;
 }
 
-.button--negative {
+.ui-button--negative {
     color: $neutral-light-l2;
     background-color: $red-l1;
 }
-.button--negative:hover {
+.ui-button--negative:hover {
     color: $neutral-light-l2;
     background-color: $red-light-d2;
 }
