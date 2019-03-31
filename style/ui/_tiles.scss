@@ -1,0 +1,57 @@
+.ui-tiles__container {
+    display: flex;
+    padding: 20px;
+}
+
+.ui-tiles__tile {
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $neutral-light-l1;
+        color: $primary-d1;
+        i {
+            color: $primary-l1;
+        }
+    }
+}
+
+.ui-tiles__tile__icon {
+}
+
+.ui-tiles__tile__icon i {
+    color: $neutral;
+}
+
+.ui-tiles__tile__label {
+
+}
+
+.ui-tiles__container.ui-tiles {
+    .ui-tiles__tile {
+        width: 150px;
+        padding: 15px;
+        border-radius: 15px;
+    }    
+    .ui-tiles__tile__icon {
+        padding: 5px 5px 15px 5px;
+    }    
+    .ui-tiles__tile__icon i {
+        font-size: 64px;
+    }
+}
+
+.ui-tiles__container.ui-tiles--small {
+    .ui-tiles__tile {
+        width: 75px;
+        padding: 5px;
+        border-radius: 5px;
+    }    
+    .ui-tiles__tile__icon {
+        padding: 2px 2px 5px 2px;
+    }    
+    .ui-tiles__tile__icon i {
+        font-size: 32px;
+    }
+}
+
