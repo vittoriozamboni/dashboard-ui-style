@@ -2,16 +2,16 @@
 @import "../fonts";
 
 .ui-button ~ .ui-button {
-    margin-left: 10px;
+    margin-left: .5rem;
 }
 
 .ui-button {
     font-family: Lato;
     font-size: $text-standard;
-    border: 1px solid $neutral-l2;
+    border: 1px solid transparent;
     border-radius: 17px;
     color: $neutral;
-    background-color: $neutral-light-l2;
+    background-color: $neutral-light-l1;
     padding: 7px 15px;
     cursor: pointer;
     text-decoration: none;
@@ -21,13 +21,14 @@
 }
 
 .ui-button:hover {
-    color: $neutral-light-d2;
-    border-color: $neutral-light;
+    color: $neutral-l2;
+    background-color: $neutral-light-l2;
 }
 
 .ui-button.ui-button--small {
     font-size: $text-small;
     padding: 6px 10px 4px;
+    padding: .4rem .62rem .3rem;
     border-radius: 15px;
 }
 
