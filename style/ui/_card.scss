@@ -1,0 +1,75 @@
+$ui-card-border-radius: 10px !default;
+$ui-card-side-width: 128px;
+
+.ui-card__container {
+    display: inline-flex;
+    max-width: 500px;
+    border-radius: 10px;
+    margin: 0 1rem 1rem 0;
+
+    &:hover {
+        box-shadow: $ui-shadow-medium;
+    }
+}
+.ui-card__side__container {
+    width: 128px;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-top-left-radius: $ui-card-border-radius;
+    border-bottom-left-radius: $ui-card-border-radius;
+    border: 1px solid $neutral-light-l1;
+    border-right: 0;
+}
+
+.ui-card__side__icon {
+    border-radius: 32px;
+    background-color: white;
+    height: 64px;
+    width: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.ui-card__main__container {
+    padding: .7rem;
+    display: inline-flex;
+    border-top-right-radius: $ui-card-border-radius;
+    border-bottom-right-radius: $ui-card-border-radius;
+    border: 1px solid $neutral-light-l1;
+    border-left: 0;
+    width: calc(100% - #{$ui-card-side-width});
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.ui-card__title {
+    font-size: $text-standard;
+    font-weight: 600;
+    margin-bottom: .3rem;
+}
+
+.ui-card__subtitle {
+    font-size: $text-smaller;
+    margin-bottom: 1rem;
+    color: $neutral-l2;
+}
+
+.ui-card__description {
+    font-size: $text-small;
+    color: $neutral-l2;
+    margin-bottom: 1rem;
+}
+
+.ui-card__controls {
+    justify-content: space-between;
+    display: flex; 
+    align-items: center;
+}
+
+.ui-card__control {
+    font-weight: 600;
+}
