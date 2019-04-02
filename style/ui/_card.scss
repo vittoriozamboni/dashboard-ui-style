@@ -6,6 +6,7 @@ $ui-card-side-width: 128px;
     max-width: 500px;
     border-radius: 10px;
     margin: 0 1rem 1rem 0;
+    box-shadow: $ui-shadow-simple-small;
 
     &:hover {
         box-shadow: $ui-shadow-medium;
