@@ -1,4 +1,10 @@
+/* Variables */
 @import '../vars/colors';
+
+/* Mixins */
+@import '../mixins/icons';
+
+$ui-page-padding: 15px !default;
 
 @import 'colors';
 @import 'fonts';
