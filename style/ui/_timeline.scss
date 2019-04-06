@@ -34,7 +34,7 @@ $ui-timeline-event-dot-border-size: 2px;
         border: $ui-timeline-event-dot-border-size solid $ui-timeline-event-dot-border-color;
         background-color: $ui-timeline-event-dot-color;
         border-radius:100%;
-        top: $ui-page-padding;
+        top: #{$ui-page-padding + 2};
         left: #{($ui-timeline-panel-width - $ui-timeline-event-dot-correction)};
         z-index: 1;
       }  
