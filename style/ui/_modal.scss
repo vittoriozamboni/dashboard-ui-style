@@ -1,5 +1,5 @@
 $ui-modal-header-height: 55px !default;
-$ui-modal-footer-height: 75px !default;
+$ui-modal-footer-height: 65px !default;
 
 .ui-modal__wrapper {
     background-color: hsla(0, 0, 0, 0.3);    
@@ -58,15 +58,15 @@ $ui-modal-footer-height: 75px !default;
 }
 
 .ui-modal__content--header {
-    height: calc(100% - #{$ui-modal-header-height});
+    height: calc(100% - #{$ui-modal-header-height + 1});
 }
 
 .ui-modal__content--header-footer {
-    height: calc(100% - #{$ui-modal-header-height + $ui-modal-footer-height});
+    height: calc(100% - #{$ui-modal-header-height + $ui-modal-footer-height + 1});
 }
 
 .ui-modal__content--footer {
-    height: calc(100% - #{$ui-modal-footer-height});
+    height: calc(100% - #{$ui-modal-footer-height + 1});
 }
 
 .ui-modal__footer {
