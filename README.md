@@ -18,3 +18,18 @@ If you are using a local version of the repository and `yarn link` facility, use
 ```scss
 @import '~@vzamboni/dashboard-ui-style/style/ui';
 ```
+# Compiling
+
+In case you don't have access to scss executables, you might want to compile the scss files and use plain css.
+
+Install sass frmo the main directory of this repository:
+
+```bash
+npm install
+```
+
+Run the build:
+
+```bash
+./node_modules/.bin/sass style/_ui.scss dist/ui.css
+```

@@ -1,4 +1,7 @@
 {
     "name": "@vzamboni/dashboard-ui-style",
-    "version": "0.0.1"
+    "version": "0.0.1",
+    "devDependencies": {
+        "sass": "^1.20.1"
+    }
 }
