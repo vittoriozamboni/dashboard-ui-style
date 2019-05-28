@@ -1,0 +1,7 @@
+@import "../../mixins/icons";
+
+.icon-control {
+    @include icon-control;
+    padding: 7px 8px;
+    margin: 0;
+}
