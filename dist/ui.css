@@ -1822,6 +1822,7 @@
   padding: 7px 15px;
   cursor: pointer;
   text-decoration: none;
+  display: inline-block;
 }
 .ui-button:focus {
   outline: none;
@@ -1847,6 +1848,11 @@ a.ui-button.ui-button--small {
   margin-left: 7px;
 }
 
+.ui-button:disabled {
+  background-color: #f5f7fa;
+  cursor: default;
+}
+
 .ui-button--primary {
   color: #f5f7fa;
   background-color: #1280bf;
@@ -1855,6 +1861,11 @@ a.ui-button.ui-button--small {
 .ui-button--primary:hover {
   color: #f5f7fa;
   background-color: #40c3f7;
+}
+
+.ui-button--primary:disabled {
+  color: #f5f7fa;
+  background-color: #81defd;
 }
 
 .ui-button--positive {
@@ -1867,6 +1878,11 @@ a.ui-button.ui-button--small {
   background-color: #3dbd92;
 }
 
+.ui-button--positive:disabled {
+  color: #f5f7fa;
+  background-color: #66d6ad;
+}
+
 .ui-button--negative {
   color: #f5f7fa;
   background-color: #d01124;
@@ -1875,6 +1891,11 @@ a.ui-button.ui-button--small {
 .ui-button--negative:hover {
   color: #f5f7fa;
   background-color: #ef4e4e;
+}
+
+.ui-button--negative:disabled {
+  color: #f5f7fa;
+  background-color: #ff9999;
 }
 
 .ui-card__container {
