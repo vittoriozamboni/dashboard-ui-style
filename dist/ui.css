@@ -4315,6 +4315,7 @@ a.ui-button.ui-button--small {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 200px;
 }
 
 .ui-loader {
