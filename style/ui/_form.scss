@@ -1,4 +1,4 @@
-@import "../colors";
+@import "../../vars/colors";
 
 $ui-form-field-padding: 7px 0 !default;
 
@@ -20,7 +20,7 @@ $ui-form-field-padding: 7px 0 !default;
 
 .ui-form__field {
     display: flex;
-    padding: $ui-form-field-padding;    
+    padding: $ui-form-field-padding;
     align-items: center;
 }
 
@@ -36,7 +36,7 @@ $ui-form-field-padding: 7px 0 !default;
 /** VERTICAL FIELDS (two lines) **/
 
 .ui-form__field--vertical {
-    padding: $ui-form-field-padding;    
+    padding: $ui-form-field-padding;
 }
 
 .ui-form__label--vertical {

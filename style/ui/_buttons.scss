@@ -1,4 +1,4 @@
-@import "../colors";
+@import "../../vars/colors";
 @import "../fonts";
 
 .ui-button ~ .ui-button {
@@ -16,7 +16,7 @@
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
-    
+
     &:focus { outline: none; }
 
 }
@@ -34,7 +34,7 @@
 }
 
 a.ui-button.ui-button--small {
-    padding: 7px 10px 6px;    
+    padding: 7px 10px 6px;
 }
 
 .ui-button ~ .ui-button.ui-button--small {
