@@ -1,0 +1,195 @@
+@import '../../vars/colors';
+
+.ui-table__container {
+    position: relative;
+}
+
+.ui-table__container * {
+    box-sizing: border-box;
+}
+
+.ui-table__header__container {
+    overflow-x: scroll;
+    background-color: $grey-light-l2;
+}
+.ui-table__body__container {
+    overflow: auto;
+    background-color: $grey-light-l2;
+}
+
+.ui-table__main-table__container {
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.ui-table__pinned-left__header__container {
+    background-color: $grey-light-l2;
+    overflow: hidden;
+}
+
+.ui-table__pinned-left__body__outer-container {
+    padding-bottom: 0;
+}
+
+.ui-table__pinned-left__body__container {
+    background-color: $grey-light-l2;
+    overflow-y: scroll;
+    margin-right: -35px;
+    height: 100%;
+    max-height: 300px;
+}
+
+.ui-table__pinned-left__body__container--with-scroll {
+    overflow-x: scroll;
+}
+
+.ui-table__pinned-left__container--shadowed {
+    box-shadow: 4px 0 4px rgba(100, 100, 100, 0.1);
+}
+
+.ui-table__pinned-left__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: auto;
+}
+
+.ui-table__header,
+.ui-table__body {
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+.ui-table__header__container--body-has-horizontal-scrollbar {
+    margin-right: 15px;
+}
+
+/*
+.ui-table__header__container--body-has-horizontal-scrollbar .ui-table__header__row:after {
+    content: '';
+    width: 15px;
+    display: inline-block;
+}
+*/
+
+
+/*
+.ui-table__header__row,
+.ui-table__body__row {
+}
+*/
+
+/*
+.ui-table__header__col,
+.ui-table__body__col {
+}
+*/
+
+.ui-table__header__col--hovered {
+    background-color:darken($grey-light-l2, 2);
+}
+
+.ui-table__header__col--row-border,
+.ui-table__body__col--row-border {
+    border-bottom: 1px solid $grey-light-l1;
+}
+
+.ui-table__header__col--cell-border,
+.ui-table__body__col--cell-border {
+    border: 1px solid $grey-light-l1;
+}
+
+.ui-table__header__col {
+    text-align: left;
+    color: $grey-light-d1;
+    font-weight: 600;
+}
+
+.ui-table__header__col__controls {
+    margin-left: 7px;
+    display: inline-flex;
+    position: relative;
+}
+.ui-table__header__col__controls__control {
+    cursor: pointer;
+}
+.ui-table__header__col__controls__control__content {
+    display: none;
+    position: fixed;
+    background-color: $grey-light-l2;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 0;
+    z-index: 1;
+}
+.ui-table__header__col__controls__control:hover .ui-table__header__col__controls__control__content {
+    display: block;
+}
+.ui-table__header__col__controls__control__content__elements {
+
+}
+.ui-table__header__col__controls__control__content__element {
+    padding: 9px;
+}
+.ui-table__header__col__controls__control__content__element:hover {
+    background-color: darken($grey-light-l2, 3);
+}
+.ui-table__header__col__controls__control__content__divider {
+    border-bottom: 1px solid $grey-light-l1;
+}
+
+.ui-table__header__col__order {
+    margin-left: 7px;
+    display: inline-flex;
+}
+
+
+.ui-table__body__col--zebra-dark {
+    background-color:darken($grey-light-l2, 3);
+}
+
+.ui-table__header__cell,
+.ui-table__body__cell {
+    display: flex;
+}
+
+.ui-table__header__cell--single-line,
+.ui-table__body__cell--single-line {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ui-table__page-controller__container {
+    display: flex;
+    margin-top: 10px;
+}
+.ui-table__page-controller__container--expanded {
+    justify-content: space-between;
+}
+.ui-table__page-controller__container--collapsed {
+    justify-content: flex-end;
+}
+
+.ui-table__page-controller {
+    display: flex;
+}
+
+.ui-table__page-controller__page {
+    display: inline-block;
+    border: 1px solid $grey-light-l1;
+    padding: 7px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+
+    &:hover {
+        background-color: $grey-light;
+    }
+}
+.ui-table__page-controller__page--active {
+    background-color: $grey-light-l1;
+}
+.ui-table__page-controller__page--navigator {
+    color: $grey-light-d1;
+}
