@@ -1,6 +1,8 @@
 .flex-container { display: flex; }
-.flex-container--middle { display: flex; align-items: center; }
 .flex-container--baseline { display: flex; align-items: baseline; }
+.flex-container--middle { display: flex; align-items: center; }
+.flex-container--center { display: flex; justify-content: center; }
+.flex-container--center-middle { display: flex; align-items: center; justify-content: center; }
 .block { display: block; }
 .iblock { display: inline-block; }
 .cursor-pointer { cursor: pointer; }
