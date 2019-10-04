@@ -11,6 +11,7 @@
 .ui-table__header__container {
     overflow-x: scroll;
     background-color: $grey-light-l2;
+    margin-bottom: -15px;
 }
 .ui-table__body__container {
     overflow: auto;
@@ -65,27 +66,6 @@
     margin-right: 15px;
 }
 
-/*
-.ui-table__header__container--body-has-horizontal-scrollbar .ui-table__header__row:after {
-    content: '';
-    width: 15px;
-    display: inline-block;
-}
-*/
-
-
-/*
-.ui-table__header__row,
-.ui-table__body__row {
-}
-*/
-
-/*
-.ui-table__header__col,
-.ui-table__body__col {
-}
-*/
-
 .ui-table__header__col--hovered {
     background-color:darken($grey-light-l2, 2);
 }
@@ -109,34 +89,9 @@
 .ui-table__header__col__controls {
     margin-left: 7px;
     display: inline-flex;
-    position: relative;
 }
 .ui-table__header__col__controls__control {
     cursor: pointer;
-}
-.ui-table__header__col__controls__control__content {
-    display: none;
-    position: fixed;
-    background-color: $grey-light-l2;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 0;
-    z-index: 1;
-}
-.ui-table__header__col__controls__control:hover .ui-table__header__col__controls__control__content {
-    display: block;
-}
-.ui-table__header__col__controls__control__content__elements {
-
-}
-.ui-table__header__col__controls__control__content__element {
-    padding: 9px;
-}
-.ui-table__header__col__controls__control__content__element:hover {
-    background-color: darken($grey-light-l2, 3);
-}
-.ui-table__header__col__controls__control__content__divider {
-    border-bottom: 1px solid $grey-light-l1;
 }
 
 .ui-table__header__col__order {
@@ -145,13 +100,17 @@
 }
 
 
+.ui-table__header__col--pinned-outside,
+.ui-table__body__col--pinned-outside {
+    visibility: hidden;
+}
 .ui-table__body__col--zebra-dark {
     background-color:darken($grey-light-l2, 3);
 }
 
 .ui-table__header__cell,
 .ui-table__body__cell {
-    display: flex;
+    display: block;
 }
 
 .ui-table__header__cell--single-line,
