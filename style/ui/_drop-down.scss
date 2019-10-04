@@ -1,0 +1,42 @@
+@import "../../vars/colors";
+
+.ui-drop-down {
+
+}
+
+.ui-drop-down__outer-container {
+    display: inline-block;
+}
+
+.ui-drop-down__container {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    background-color: $grey-light-l2;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 0;
+    z-index: 1;
+    transition: visibility 0.1s 0s, opacity 0.1s 0s linear;
+}
+
+.ui-drop-down__container--visible {
+    visibility: visible;
+    opacity: 1;
+
+}
+
+.ui-drop-down__entry {
+    padding: 9px;
+    background-color: $grey-light-l2;
+}
+.ui-drop-down__entry:hover {
+    background-color: darken($grey-light-l2, 3);
+}
+
+.ui-drop-down__entry--clickable {
+    cursor: pointer;
+}
+
+.ui-drop-down__divider {
+    border-bottom: 1px solid $grey-light-l1;
+}
