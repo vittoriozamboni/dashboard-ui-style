@@ -1,3 +1,5 @@
+@import '../../vars/colors';
+
 .ui-text {
     padding: 0.7rem 0;
 }
@@ -8,4 +10,13 @@
 
 .ui-text__boxed {
     padding: 0.7rem;
+}
+
+.ui-text__monospace {
+    margin: 0;
+    font-size: 0.8rem;
+    padding: 0.05rem 0.2rem;
+    display: inline-block;
+    color: $grey-l2;
+    background-color: darken($grey-light-l2, 2);
 }
