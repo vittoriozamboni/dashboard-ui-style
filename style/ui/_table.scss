@@ -107,6 +107,15 @@
 .ui-table__body__col--zebra-dark {
     background-color:darken($grey-light-l2, 3);
 }
+.ui-table__body__col--vertical-alignment-top {
+    vertical-align: top;
+}
+.ui-table__body__col--vertical-alignment-middle {
+    vertical-align: middle;
+}
+.ui-table__body__col--vertical-alignment-bottom {
+    vertical-align: bottom;
+}
 
 .ui-table__header__cell,
 .ui-table__body__cell {
