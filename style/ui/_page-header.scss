@@ -8,6 +8,9 @@ $ui-page-padding: 15px !default;
     align-items: center;
     justify-content: space-between;
 }
+.ui-page-header__container--with-shadow {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
 
 .ui-page-header {
     margin-top: 1rem;
@@ -23,6 +26,6 @@ $ui-page-padding: 15px !default;
         content: ">";
         margin-left: .3rem;
         margin-right: .3rem;
-        text-decoration: none;        
+        text-decoration: none;
     }
 }
