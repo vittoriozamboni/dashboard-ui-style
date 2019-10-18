@@ -9,7 +9,7 @@
     font-family: Lato;
     font-size: $text-standard;
     border: 1px solid transparent;
-    border-radius: 17px;
+    border-radius: 2px;
     color: $neutral;
     background-color: $neutral-light-l1;
     padding: 7px 15px;
@@ -24,16 +24,16 @@
 .ui-button:hover {
     color: $neutral-l2;
     background-color: $neutral-light-l2;
+    border-color: $neutral-light-l1;
 }
 
-.ui-button.ui-button--small {
+.ui-button--small {
     font-size: $text-small;
     padding: 6px 10px 4px;
     padding: .4rem .62rem .3rem;
-    border-radius: 15px;
 }
 
-a.ui-button.ui-button--small {
+a.ui-button--small {
     padding: 7px 10px 6px;
 }
 
@@ -41,8 +41,10 @@ a.ui-button.ui-button--small {
     margin-left: 7px;
 }
 
-.ui-button:disabled {
+.ui-button:disabled,
+.ui-button:disabled:hover {
     background-color: $neutral-light-l2;
+    border-color: $neutral-light-l1;
     cursor: default;
 }
 
@@ -54,7 +56,8 @@ a.ui-button.ui-button--small {
     color: $neutral-light-l2;
     background-color: $primary-light-d2;
 }
-.ui-button--primary:disabled {
+.ui-button--primary:disabled,
+.ui-button--primary:disabled:hover {
     color: $neutral-light-l2;
     background-color: $primary-light;
 }
@@ -67,7 +70,8 @@ a.ui-button.ui-button--small {
     color: $neutral-light-l2;
     background-color: $teal-light-d2;
 }
-.ui-button--positive:disabled {
+.ui-button--positive:disabled,
+.ui-button--positive:disabled:hover {
     color: $neutral-light-l2;
     background-color: $teal-light-d1;
 }
@@ -80,7 +84,8 @@ a.ui-button.ui-button--small {
     color: $neutral-light-l2;
     background-color: $red-light-d2;
 }
-.ui-button--negative:disabled {
+.ui-button--negative:disabled,
+.ui-button--negative:disabled:hover {
     color: $neutral-light-l2;
     background-color: $red-light;
 }
