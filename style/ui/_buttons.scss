@@ -64,16 +64,16 @@ a.ui-button--small {
 
 .ui-button--positive {
     color: $neutral-light-l2;
-    background-color: $teal;
+    background-color: $green;
 }
 .ui-button--positive:hover {
     color: $neutral-light-l2;
-    background-color: $teal-light-d2;
+    background-color: $green-light-d2;
 }
 .ui-button--positive:disabled,
 .ui-button--positive:disabled:hover {
     color: $neutral-light-l2;
-    background-color: $teal-light-d1;
+    background-color: $green-light-d1;
 }
 
 .ui-button--negative {
