@@ -1,0 +1,25 @@
+$ui-page-padding: 15px !default;
+
+.ui-navigator {
+    padding: $ui-page-padding;
+}
+
+.ui-navigator--right {
+    border-left: 1px solid $grey-light-l1;
+}
+
+.ui-navigator__title {
+    color: $grey-l2;
+    text-transform: uppercase;
+}
+
+.ui-navigator__item {
+    color: $grey-l1;
+    margin-left: $ui-page-padding;
+    cursor: pointer;
+    padding: $ui-page-padding / 2;
+}
+
+.ui-navigator__item--selected {
+    color: $primary;
+}
