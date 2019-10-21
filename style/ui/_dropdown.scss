@@ -1,0 +1,55 @@
+@import "../../vars/colors";
+
+/* Reserved for future usage
+.ui-dropdown {}
+*/
+
+.ui-dropdown__outer-container {
+    display: inline-block;
+}
+
+.ui-dropdown__container {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    background-color: $grey-light-l2;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 0;
+    z-index: 1;
+    transition: visibility 0.1s 0s, opacity 0.1s 0s linear;
+}
+
+.ui-dropdown__container--visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Used to trigger the dropdown with CSS only */
+.ui-dropdown__trigger--manual {
+    position: relative;
+}
+.ui-dropdown__trigger--manual .ui-dropdown__container {
+    position: absolute;
+}
+.ui-dropdown__trigger--manual:hover .ui-dropdown__container {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Dropdown content */
+
+.ui-dropdown__entry {
+    padding: 9px;
+    background-color: $grey-light-l2;
+}
+.ui-dropdown__entry:hover {
+    background-color: darken($grey-light-l2, 3);
+}
+
+.ui-dropdown__entry--clickable {
+    cursor: pointer;
+}
+
+.ui-dropdown__divider {
+    border-bottom: 1px solid $grey-light-l1;
+}

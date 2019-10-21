@@ -17,7 +17,7 @@ $ui-page-padding: 15px !default;
 @import 'ui/card';
 @import 'ui/dashboard-header';
 @import 'ui/divider';
-@import 'ui/drop-down';
+@import 'ui/dropdown';
 @import 'ui/form';
 @import 'ui/form-vertical';
 @import 'ui/footer';
@@ -50,4 +50,8 @@ textarea:focus,
 button:focus {
     outline: none;
     box-shadow: 0 0 3px 1px $primary;
+}
+
+pre {
+    margin: 0;
 }
