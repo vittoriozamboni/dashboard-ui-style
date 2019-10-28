@@ -3,7 +3,10 @@ $ui-page-padding: 15px !default;
 .ui-navigator {
     padding: $ui-page-padding;
 }
-
+.ui-navigator--sticky {
+    position: sticky;
+    top: 0;
+}
 .ui-navigator--right {
     border-left: 1px solid $grey-light-l1;
 }
