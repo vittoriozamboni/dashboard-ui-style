@@ -1,5 +1,7 @@
 @import '../../vars/colors';
 
+$ui-page-padding: 15px !default;
+
 /*
 .ui-tabs__container {}
 */
@@ -32,9 +34,14 @@
 
 .ui-tabs__content {
     display: none;
+    padding: $ui-page-padding;
 }
 
 .ui-tabs__content--selected {
     display: block;
+}
+
+.ui-tabs__content--compact {
+    padding: 0;
 }
 
