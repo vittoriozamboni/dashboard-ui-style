@@ -27,11 +27,39 @@ $ui-form-field-padding: 7px 0 !default;
 .ui-form__label {
     color: $grey-d2;
     display: inline-block;
+    padding-right: $ui-page-padding;
 }
 
 .ui-form__field-input {
     display: inline-block;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
 }
+
+.ui-form__field__input {
+    box-sizing: border-box;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid $neutral-light;
+    background-color: transparent;
+    padding: 3px;
+}
+
+.ui-form__field__input:focus ~ .ui-form__field-input__border {
+    width: 100%;
+    left: 0;
+    transition: 0.2s;
+}
+
+.ui-form__field-input__border {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    width: 0;
+    height: 2px;
+    background-color: $primary;
+  }
 
 /** VERTICAL FIELDS (two lines) **/
 
@@ -47,3 +75,66 @@ $ui-form-field-padding: 7px 0 !default;
 .ui-form__field-input--vertical {
 }
 */
+
+    .form-group {
+      position: relative;
+      padding-top: 16px;
+      margin-bottom: 16px;
+      .animated-label {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        width: 100%;
+        font-weight: 300;
+        opacity: 0.5;
+        cursor: text;
+        transition: 0.2s ease all;
+        margin: 0;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 45%;
+          height: 2px;
+          width: 10px;
+          visibility: hidden;
+          background-color:#8e44ad;
+          transition: 0.2s ease all;
+        }
+      }
+      &.not-empty {
+        .animated-label {
+          top: 0;
+          font-size: 12px;
+        }
+      }
+      .form-control {
+        position: relative;
+        z-index: 1;
+        border-radius: 0;
+        border-width: 0 0 1px;
+        border-bottom-color: rgba(0,0,0,0.25);
+        height: auto;
+        padding: 3px 0 5px;
+        &:focus {
+          box-shadow: none;
+          border-bottom-color: rgba(0,0,0,0.12);
+          ~ .animated-label {
+            top: 0;
+            opacity: 1;
+            color: #8e44ad;
+            font-size: 12px;
+            &:after {
+              visibility: visible;
+              width: 100%;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
