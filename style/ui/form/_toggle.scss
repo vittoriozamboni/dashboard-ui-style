@@ -18,6 +18,11 @@ $ui-form-toggle-height: $ui-form-toggle-width / 2 - $ui-form-toggle-padding / 2;
 .ui-form__field__toggle--checked {
     background: $grey-light-l1;
 }
+.ui-form__field__toggle--disabled {
+    background: $grey-light-l2;
+    border: 1px solid $grey-light-l1;
+    cursor: not-allowed;
+}
 
 .ui-form__field__toggle__checkbox {
     position: absolute;
@@ -45,4 +50,11 @@ $ui-form-toggle-height: $ui-form-toggle-width / 2 - $ui-form-toggle-padding / 2;
 }
 .ui-form__field__toggle__switch--checked::after {
     background-color: $primary-l1;
+}
+.ui-form__field__toggle__switch--disabled::not(.ui-form__field__toggle__switch--checked)::after {
+    background: $grey-light;
+}
+.ui-form__field__toggle__switch--disabled.ui-form__field__toggle__switch--checked::after {
+    border: 1px solid $primary-l2;
+    background: $grey-light-l1;
 }

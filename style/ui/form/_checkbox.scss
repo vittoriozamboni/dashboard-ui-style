@@ -77,7 +77,10 @@ $ui-form-checkbox-indicator-width: 16px !default;
 .ui-form__field__checkbox__indicator--disabled::after {
     @extend %indicator-disabled-after;
 }
-
+.ui-form__field__checkbox__indicator--checked.ui-form__field__checkbox__indicator--disabled {
+    @extend %indicator-disabled;
+    border: 1px solid $primary-l2;
+}
 /* Hover: NOT disabled */
 %indicator-not-disabled-hover {
     background: $primary-l2;
