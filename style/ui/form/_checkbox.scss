@@ -11,6 +11,10 @@ $ui-form-checkbox-indicator-width: 16px !default;
     cursor: pointer;
     padding: 2px 2px 2px 22px;
 }
+.ui-form__field__checkbox__label {
+    cursor: pointer;
+    display: inline-block;
+}
 .ui-form__field__checkbox__checkbox {
     position: absolute;
     z-index: -1;
