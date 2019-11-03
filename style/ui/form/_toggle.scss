@@ -1,0 +1,48 @@
+/**
+* CREDITS: https://codepen.io/liamj/pen/QYyBzz
+**/
+
+$ui-form-toggle-padding: 2px;
+$ui-form-toggle-width: 30px;
+$ui-form-toggle-height: $ui-form-toggle-width / 2 - $ui-form-toggle-padding / 2;
+
+.ui-form__field__toggle {
+    cursor: pointer;
+    background: $grey-light-l1;
+    padding: $ui-form-toggle-padding;
+    width: $ui-form-toggle-width;
+    height: $ui-form-toggle-height;
+    border-radius: $ui-form-toggle-height / 2 + $ui-form-toggle-padding;
+}
+
+.ui-form__field__toggle--checked {
+    background: $grey-light-l1;
+}
+
+.ui-form__field__toggle__checkbox {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.ui-form__field__toggle__switch {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 0fr 1fr 1fr;
+    transition: all .5s;
+}
+.ui-form__field__toggle__switch::after {
+    content: '';
+    border-radius: 50%;
+    background: $grey-light-d2;
+    grid-column: 2;
+    transition: all .5s;
+}
+
+.ui-form__field__toggle__switch--checked {
+    grid-template-columns: 1fr 1fr 0fr;
+}
+.ui-form__field__toggle__switch--checked::after {
+    background-color: $primary-l1;
+}
