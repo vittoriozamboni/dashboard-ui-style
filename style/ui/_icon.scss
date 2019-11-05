@@ -1,0 +1,52 @@
+
+@import "../../mixins/icons";
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+/*
+.ui-icon {}
+*/
+
+.ui-icon.ui-icon--small {
+    font-size: 18px;
+}
+
+.ui-icon.ui-icon--normal {
+    font-size: 24px;
+}
+
+.ui-icon.ui-icon--big {
+    font-size: 36px;
+}
+
+.ui-icon.ui-icon--bigger {
+    font-size: 48pxl
+}
+
+.ui-icon--clickable {
+    cursor: pointer;
+}
+
+.ui-icon--spin {
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+.ui-icon__control {
+    @include icon-control;
+    padding: 7px 8px;
+    margin: 0;
+}
