@@ -4,17 +4,19 @@ $ui-card-side-width: 128px;
 .ui-card__container {
     display: inline-flex;
     max-width: 500px;
+    height: auto;
     border-radius: 10px;
     margin: 0 1rem 1rem 0;
     box-shadow: $ui-shadow-simple-small;
 
     &:hover {
-        box-shadow: $ui-shadow-medium;
+        transform: translateY(-3px);
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15), 0 8px 6px rgba(0, 0, 0, 0.1);
     }
 }
 .ui-card__side__container {
     width: 128px;
-    display: flex;    
+    display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
@@ -67,7 +69,7 @@ $ui-card-side-width: 128px;
 
 .ui-card__controls {
     justify-content: space-between;
-    display: flex; 
+    display: flex;
     align-items: center;
 }
 
