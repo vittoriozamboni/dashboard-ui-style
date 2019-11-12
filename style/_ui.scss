@@ -7,11 +7,9 @@
 
 $ui-page-padding: 15px !default;
 
-@import 'colors';
-@import 'fonts';
-@import 'helpers';
 @import 'shadows';
 
+@import 'ui/badge';
 @import 'ui/block';
 @import 'ui/buttons';
 @import 'ui/card';
@@ -39,6 +37,11 @@ $ui-page-padding: 15px !default;
 @import 'ui/tiles';
 @import 'ui/timeline';
 @import 'ui/titles';
+
+@import 'colors';
+@import 'fonts';
+@import 'helpers';
+
 
 input[type='checkbox'],
 label[for]:not([for=''])
