@@ -12,5 +12,6 @@ $ui-page-header-height: 46px !default;
     height: calc(100vh - #{($ui-page-padding * 2 + $ui-dashboard-header-height + $ui-dashboard-footer-height)});
 }
 .ui-page-body--full-height__with-page-header {
+    padding-top: $ui-page-padding - 4;
     height: calc(100vh - #{($ui-page-padding * 2 + $ui-dashboard-header-height + $ui-dashboard-footer-height + $ui-page-header-height)});
 }

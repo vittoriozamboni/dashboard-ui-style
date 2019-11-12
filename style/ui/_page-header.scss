@@ -1,12 +1,12 @@
 $ui-page-padding: 15px !default;
 
 .ui-page-header__container {
-    border-bottom: 1px solid $neutral-light-l1;
     padding-left: $ui-page-padding;
     padding-right: $ui-page-padding;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 4px;
 }
 .ui-page-header__container--with-shadow {
     box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.15);
@@ -15,7 +15,7 @@ $ui-page-padding: 15px !default;
 .ui-page-header {
     margin-top: 10px;
     margin-bottom: 10px;
-    color: $neutral-d1;
+    color: $primary;
 }
 
 .ui-page-header.ui-page-header__breadcrumb {
