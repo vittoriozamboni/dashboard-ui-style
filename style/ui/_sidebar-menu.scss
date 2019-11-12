@@ -1,5 +1,10 @@
+$ui-page-padding: 15px !default;
+
 .ui-sidebar-menu {
     width: 100%;
+}
+.ui-sidebar-menu--padded {
+    padding: $ui-page-padding;
 }
 
 .ui-sidebar-menu__title {

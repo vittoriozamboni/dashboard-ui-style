@@ -11,8 +11,7 @@ $ui-sidebar-trigger-height: $ui-sidebar-closed-width;
     display: inline-block;
     width: $ui-sidebar-closed-width;
     transition: all 0.4s;
-    background-color: $grey-light-l2;
-    height: calc(100vh - #{$ui-dashboard-header-height});
+    background-color: $grey-light-l2;    
     border-right: 1px solid $neutral-light-l1;
 }
 
@@ -29,7 +28,7 @@ $ui-sidebar-trigger-height: $ui-sidebar-closed-width;
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
-    height: calc(100vh - #{$ui-dashboard-header-height});
+    height: 100%;
     box-sizing: content-box;
     width: 100%;
 }
@@ -61,13 +60,13 @@ $ui-sidebar-trigger-height: $ui-sidebar-closed-width;
 */
 
 .ui-sidebar__elements-container {
-    height: calc(100vh - #{$ui-dashboard-header-height});
+    height: 100%;
     justify-content: space-between;
     display: flex;
     flex-direction: column;
 }
 .ui-sidebar__elements-container--with-trigger {
-    height: calc(100vh - #{$ui-dashboard-header-height + $ui-sidebar-trigger-height});
+    height: calc(100% - #{$ui-sidebar-trigger-height});
 }
 
 .ui-sidebar__top-container {
