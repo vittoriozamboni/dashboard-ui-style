@@ -2,6 +2,7 @@ $ui-page-padding: 15px !default;
 
 .ui-sidebar-menu {
     width: 100%;
+    box-sizing: border-box;
 }
 .ui-sidebar-menu--padded {
     padding: $ui-page-padding;

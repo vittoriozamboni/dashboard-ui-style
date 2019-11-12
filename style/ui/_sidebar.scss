@@ -11,8 +11,9 @@ $ui-sidebar-trigger-height: $ui-sidebar-closed-width;
     display: inline-block;
     width: $ui-sidebar-closed-width;
     transition: all 0.4s;
-    background-color: $grey-light-l2;    
+    background-color: $grey-light-l2;
     border-right: 1px solid $neutral-light-l1;
+    box-sizing: border-box;
 }
 
 .ui-sidebar__container--open {
@@ -73,7 +74,7 @@ $ui-sidebar-trigger-height: $ui-sidebar-closed-width;
     flex-grow: 1;
     transition: all 0.4s;
     overflow-y: auto;
-    overflow-x: hidden;    
+    overflow-x: hidden;
 }
 .ui-sidebar__top-container--closed {
     padding-top: 34px;
