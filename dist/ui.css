@@ -1079,15 +1079,6 @@ Use to have the same effects without setting the classes
   height: calc(100vh - 190px);
 }
 
-.ui-panel {
-  border-radius: 10px;
-  padding: 10px;
-  box-sizing: border-box;
-  background-color: white;
-  border: 1px solid white;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-}
-
 .ui-section {
   padding-bottom: 1.5rem;
 }
@@ -1267,6 +1258,9 @@ Use to have the same effects without setting the classes
 
 .ui-sidebar-menu__entry {
   padding: 7px;
+  display: block;
+  text-decoration: none;
+  color: #3f4d5a;
 }
 
 .ui-sidebar-menu__entry:hover {
@@ -1452,6 +1446,7 @@ Use to have the same effects without setting the classes
   display: inline-flex;
   border: 1px solid #e5e8eb;
   padding: 7px 10px;
+  align-items: center;
   cursor: pointer;
   margin-left: 10px;
 }
