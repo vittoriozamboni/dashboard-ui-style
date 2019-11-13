@@ -25,11 +25,12 @@ In case you don't have access to scss executables, you might want to compile the
 Install sass frmo the main directory of this repository:
 
 ```bash
-npm install
+yarn install
 ```
 
 Run the build:
 
 ```bash
 ./node_modules/.bin/sass style/_ui.scss dist/ui.css
+./node_modules/.bin/sass style/_ui.scss dist/ui.min.css --style=compressed
 ```
