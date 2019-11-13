@@ -1,0 +1,40 @@
+$ui-page-padding: 15px !default;
+$ui-dashboard-header-height: 46px !default;
+$ui-dashboard-footer-height: 46px !default;
+$ui-page-header-height: 68px !default;
+
+.ui-page__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.ui-page__header__container {
+    padding-left: $ui-page-padding;
+    padding-right: $ui-page-padding;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+.ui-page__header__container--with-shadow {
+    box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.ui-page__header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: $primary;
+}
+
+.ui-page__body {
+    padding: $ui-page-padding;
+    overflow: auto;
+}
+
+.ui-page__body--full-height {
+    height: calc(100vh - #{($ui-page-padding * 2 + $ui-dashboard-header-height + $ui-dashboard-footer-height)});
+}
+.ui-page__body--full-height__with-page-header {
+    padding-top: $ui-page-padding - 4;
+    height: calc(100vh - #{($ui-page-padding * 2 + $ui-dashboard-header-height + $ui-dashboard-footer-height + $ui-page-header-height)});
+}
