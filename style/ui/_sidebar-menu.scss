@@ -19,6 +19,9 @@ $ui-page-padding: 15px !default;
 
 .ui-sidebar-menu__entry {
     padding: 7px;
+    display: block;
+    text-decoration: none;
+    color: $grey;
 }
 .ui-sidebar-menu__entry:hover {
     background-color: $grey-light-l1;
