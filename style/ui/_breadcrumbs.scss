@@ -1,0 +1,26 @@
+.ui-breadcrumbs__container {
+    font-size: 0.7rem;
+    color: $grey-light-d1;
+    padding: 5px 0;
+}
+
+.ui-breadcrumbs__breadcrumb {
+    text-decoration: none;
+    display: inline-block;
+}
+.ui-breadcrumbs__breadcrumb--clickable {
+    cursor: pointer;
+}
+.ui-breadcrumbs__breadcrumb--clickable:hover {
+    color: $grey-light;
+    text-decoration: underline;
+}
+.ui-breadcrumbs__breadcrumb--clickable:visited {
+    color: inherit;
+}
+
+.ui-breadcrumbs__separator {
+    color: $grey-light;
+    display: inline-block;
+    margin: 0 5px;
+}

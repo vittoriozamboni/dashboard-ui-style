@@ -7,12 +7,11 @@
 
 $ui-page-padding: 15px !default;
 
-@import 'colors';
-@import 'fonts';
-@import 'helpers';
 @import 'shadows';
 
+@import 'ui/badge';
 @import 'ui/block';
+@import 'ui/breadcrumbs';
 @import 'ui/buttons';
 @import 'ui/card';
 @import 'ui/dashboard-header';
@@ -26,10 +25,11 @@ $ui-page-padding: 15px !default;
 @import 'ui/loader';
 @import 'ui/modal';
 @import 'ui/navigator';
-@import 'ui/page-body';
-@import 'ui/page-header';
+@import 'ui/page';
 @import 'ui/panel';
 @import 'ui/section';
+@import 'ui/sidebar';
+@import 'ui/sidebar-menu';
 @import 'ui/table';
 @import 'ui/tabs';
 @import 'ui/tag';
@@ -37,6 +37,11 @@ $ui-page-padding: 15px !default;
 @import 'ui/tiles';
 @import 'ui/timeline';
 @import 'ui/titles';
+
+@import 'colors';
+@import 'fonts';
+@import 'helpers';
+
 
 input[type='checkbox'],
 label[for]:not([for=''])

@@ -1,0 +1,41 @@
+$ui-page-padding: 15px !default;
+
+.ui-sidebar-menu {
+    width: 100%;
+    box-sizing: border-box;
+}
+.ui-sidebar-menu--padded {
+    padding: $ui-page-padding;
+}
+
+.ui-sidebar-menu__title {
+    padding: 5px;
+    padding-left: 0;
+    text-transform: uppercase;
+    color: $grey-light-d1;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.ui-sidebar-menu__entry {
+    padding: 7px;
+}
+.ui-sidebar-menu__entry:hover {
+    background-color: $grey-light-l1;
+    font-weight: bold;
+}
+.ui-sidebar-menu__entry--active {
+    color: $primary;
+    font-weight: bold;
+}
+.ui-sidebar-menu__entry--clickable {
+    cursor: pointer;
+}
+
+.ui-sidebar-menu__separator {
+    border-bottom: 1px solid $grey-light-l1;
+    height: 1px;
+    display: block;
+    margin: 7px 0;
+    width: calc(100% - 50px);
+}
