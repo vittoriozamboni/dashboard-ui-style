@@ -2,7 +2,7 @@ $ui-modal-header-height: 55px !default;
 $ui-modal-footer-height: 65px !default;
 
 .ui-modal__wrapper {
-    background-color: hsla(0, 0, 0, 0.3);    
+    background-color: hsla(0, 0, 0, 0.3);
     position: absolute;
     top: 0;
     left: 0;
@@ -15,7 +15,7 @@ $ui-modal-footer-height: 65px !default;
 }
 
 .ui-modal__container {
-    background-color: $neutral-light-l2;    
+    background-color: $neutral-light-l2;
 }
 
 .ui-modal__container--maximized {
@@ -29,7 +29,7 @@ $ui-modal-footer-height: 65px !default;
 */
 
 .ui-modal__header {
-    height: $ui-modal-header-height;    
+    height: $ui-modal-header-height;
     border-bottom: 1px solid $neutral-light-l1;
     display: flex;
     justify-content: space-between;
@@ -61,7 +61,7 @@ $ui-modal-footer-height: 65px !default;
     height: calc(100% - #{$ui-modal-header-height + 1});
 }
 
-.ui-modal__content--header-footer {
+.ui-modal__content--header--footer {
     height: calc(100% - #{$ui-modal-header-height + $ui-modal-footer-height + 1});
 }
 
@@ -72,7 +72,7 @@ $ui-modal-footer-height: 65px !default;
 .ui-modal__footer {
     height: $ui-modal-footer-height;
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between;
     align-items: center;
     padding: $ui-page-padding;
     box-sizing: border-box;

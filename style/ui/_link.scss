@@ -1,0 +1,9 @@
+.ui-link {
+    color: $grey;
+    border-bottom: 1px solid $grey-light;
+    text-decoration: none;
+
+    &:visited {
+        color: $grey;
+    }
+}
