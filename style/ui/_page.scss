@@ -26,6 +26,11 @@ $ui-page-header-height: 68px !default;
     color: $primary;
 }
 
+.ui-page__header__controls-container {
+    display: flex;
+    align-items: center;
+}
+
 .ui-page__body {
     padding: $ui-page-padding;
     overflow: auto;
