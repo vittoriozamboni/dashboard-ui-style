@@ -1,0 +1,60 @@
+.ui-icon-picker__trigger__container {
+    display: inline-flex;
+    align-items: center;
+}
+
+.ui-icon-picker__trigger__icon {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.ui-icon-picker__container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ui-icon-picker__icon-tile {
+    padding: 5px;
+    margin: 7px;
+    border: 1px solid $grey-light-l1;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.ui-icon-picker__icon-tile:hover {
+    border: 1px solid $primary;
+    box-shadow: $ui-shadow-simple-small;
+}
+
+.ui-icon-picker__icon-tile--selected {
+    border: 1px solid $primary-light;
+    box-shadow: $ui-shadow-simple-small;
+}
+
+.ui-icon-picker__icon-tile--list {
+    width: 22%;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.ui-icon-picker__icon-tile__icon {
+    color: $neutral-light-d2;
+}
+.ui-icon-picker__icon-tile__icon:hover {
+    color: $primary;
+}
+.ui-icon-picker__icon-tile__icon--selected {
+    color: $primary-l2;
+}
+
+.ui-icon-picker__icon-tile__description {
+    display: inline-block;
+    padding: 0 10px;
+}
+.ui-icon-picker__icon-tile__description__name {
+    color: $neutral-light-d2;
+}
+.ui-icon-picker__icon-tile__description__clean-name {
+    color: $neutral-light;
+    font-size: 0.7rem;
+}
