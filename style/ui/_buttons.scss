@@ -15,7 +15,8 @@
     padding: 7px 15px;
     cursor: pointer;
     text-decoration: none;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
 
     &:focus { outline: none; }
 
@@ -29,12 +30,12 @@
 
 .ui-button--small {
     font-size: $text-small;
-    padding: 6px 10px 4px;
-    padding: .4rem .62rem .3rem;
+    padding: 0 7px;
+    height: 27px;
 }
 
 a.ui-button--small {
-    padding: 7px 10px 6px;
+    height: 25px;
 }
 
 .ui-button ~ .ui-button.ui-button--small {
