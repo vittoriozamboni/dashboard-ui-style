@@ -1,10 +1,13 @@
 /* Variables */
+$ui-font: 'Courier Sans' !default;
+
 @import '../vars/colors';
 @import '../vars/fonts';
 
 /* Mixins */
 @import '../mixins/icons';
 
+$ui-background-color: $grey-light-l2 !default;
 $ui-page-padding: 15px !default;
 
 @import 'shadows';
