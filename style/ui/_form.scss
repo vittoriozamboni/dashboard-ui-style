@@ -34,9 +34,10 @@ $ui-form-field-padding: 7px 0 !default;
 }
 
 .ui-form__label {
-    color: $grey-d1;
+    color: $grey-l1;
     display: inline-block;
     padding-right: $ui-page-padding;
+    font-weight: 500;
 }
 
 .ui-form__field-input {
@@ -72,17 +73,17 @@ $ui-form-field-padding: 7px 0 !default;
 }
 
 /** VERTICAL FIELDS (two lines) **/
-
+.ui-form__label--vertical {
+    margin-bottom: .5rem;
+}
 .ui-form__field--vertical {
     padding: $ui-form-field-padding;
     display: block;
 }
 
-
-/*
-.ui-form__field-input--vertical {
+.ui-form__field--vertical:not(:last-of-type) {
+    margin-right: .5rem;
 }
-*/
 
 .ui-form__field__textarea {
     font-family: $ui-font;
