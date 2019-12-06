@@ -5,6 +5,12 @@ $ui-form-field-padding: 7px 0 !default;
 @import "./form/checkbox";
 @import "./form/toggle";
 
+%field-border-focus {
+    width: 100%;
+    left: 0;
+    transition: 0.2s;
+}
+
 .ui-form__container,
 .ui-section.ui-form__container
 {
@@ -28,7 +34,7 @@ $ui-form-field-padding: 7px 0 !default;
 }
 
 .ui-form__label {
-    color: $grey-d2;
+    color: $grey-d1;
     display: inline-block;
     padding-right: $ui-page-padding;
 }
@@ -46,13 +52,14 @@ $ui-form-field-padding: 7px 0 !default;
     border: 0;
     border-bottom: 1px solid $neutral-light;
     background-color: transparent;
-    padding: 3px;
+    padding: 5px;
+}
+.ui-form__field__input::placeholder {
+    color: $neutral-light-d1;
 }
 
 .ui-form__field__input:focus ~ .ui-form__field-input__border {
-    width: 100%;
-    left: 0;
-    transition: 0.2s;
+    @extend %field-border-focus;
 }
 
 .ui-form__field-input__border {
@@ -62,19 +69,35 @@ $ui-form-field-padding: 7px 0 !default;
     width: 0;
     height: 2px;
     background-color: $primary;
-  }
+}
 
 /** VERTICAL FIELDS (two lines) **/
 
 .ui-form__field--vertical {
     padding: $ui-form-field-padding;
+    display: block;
 }
 
-.ui-form__label--vertical {
-    color: $grey-d2;
-}
 
 /*
 .ui-form__field-input--vertical {
 }
 */
+
+.ui-form__field__textarea {
+    font-family: $ui-font;
+    width: 100%;
+    min-height: 150px;
+    border: none;
+    border-bottom: 1px solid #cad1d8;
+    background-color: inherit;
+}
+.ui-form__field__textarea:focus {
+    border-bottom: none;
+}
+
+.ui-form__field__textarea:focus ~ .ui-form__field-input__border {
+    @extend %field-border-focus;
+}
+
+
