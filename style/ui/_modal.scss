@@ -46,11 +46,6 @@ $ui-modal-footer-height: 65px !default;
     padding: $ui-page-padding;
 }
 
-.ui-modal__control {
-    margin-left: 0.7rem;
-    @include icon-control;
-}
-
 .ui-modal__content {
     overflow: auto;
     padding: $ui-page-padding;
