@@ -15,6 +15,7 @@ $ui-form-field-padding: 7px 0 !default;
 .ui-section.ui-form__container
 {
     display: block;
+    overflow: hidden;
 }
 
 .ui-form__container--w100 {
@@ -28,13 +29,13 @@ $ui-form-field-padding: 7px 0 !default;
 /** HORIZONTAL FIELDS (default) **/
 
 .ui-form__field {
-    display: flex;
+    display: inline-flex;
     padding: $ui-form-field-padding;
     align-items: center;
 }
 
 .ui-form__label {
-    color: $grey-l1;
+    color: $grey-light-d1;
     display: inline-block;
     padding-right: $ui-page-padding;
     font-weight: 500;
