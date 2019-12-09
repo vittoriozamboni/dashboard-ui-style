@@ -74,6 +74,11 @@ $ui-form-field-padding: 7px 0 !default;
 }
 
 /** VERTICAL FIELDS (two lines) **/
+.ui-form__field-input--vertical {
+    display: inline-flex;
+    align-items: center;
+}
+
 .ui-form__label--vertical {
     margin-bottom: .5rem;
 }
