@@ -34,3 +34,8 @@ Run the build:
 ./node_modules/.bin/sass style/_ui.scss dist/ui.css
 ./node_modules/.bin/sass style/_ui.scss dist/ui.min.css --style=compressed
 ```
+
+Or with the shortcut (same code):
+```bash
+./generate_dist.bash
+```

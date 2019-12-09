@@ -13,14 +13,25 @@
 /* Meaningful colors */
 /*********************/
 .ui-badge {
-  font-size: 0.8rem;
+  font-size: 12px;
   margin: 0 5px;
   background-color: #cad1d8;
   padding: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ui-badge--rounded {
   border-radius: 10px;
+}
+
+.ui-badge--circular {
+  border-radius: 50%;
+  margin: 0;
+  padding: 2px;
+  width: 28px;
+  height: 28px;
 }
 
 .ui-block {
@@ -120,7 +131,8 @@
   padding: 7px 15px;
   cursor: pointer;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
 }
 .ui-button:focus {
   outline: none;
@@ -133,13 +145,13 @@
 }
 
 .ui-button--small {
-  font-size: 14px;
-  padding: 6px 10px 4px;
-  padding: 0.4rem 0.62rem 0.3rem;
+  font-size: 12px;
+  padding: 0 7px;
+  height: 27px;
 }
 
 a.ui-button--small {
-  padding: 7px 10px 6px;
+  height: 25px;
 }
 
 .ui-button ~ .ui-button.ui-button--small {
@@ -534,9 +546,16 @@ Use to have the same effects without setting the classes
   background: #e5e8eb;
 }
 
+.ui-form__field__textarea:focus ~ .ui-form__field-input__border, .ui-form__field__input:focus ~ .ui-form__field-input__border {
+  width: 100%;
+  left: 0;
+  transition: 0.2s;
+}
+
 .ui-form__container,
 .ui-section.ui-form__container {
   display: block;
+  overflow: hidden;
 }
 
 .ui-form__container--w100 .ui-form__label {
@@ -549,15 +568,16 @@ Use to have the same effects without setting the classes
 
 /** HORIZONTAL FIELDS (default) **/
 .ui-form__field {
-  display: flex;
+  display: inline-flex;
   padding: 7px 0;
   align-items: center;
 }
 
 .ui-form__label {
-  color: #1f2933;
+  color: #9aa5b1;
   display: inline-block;
   padding-right: 15px;
+  font-weight: 500;
 }
 
 .ui-form__field-input {
@@ -573,13 +593,11 @@ Use to have the same effects without setting the classes
   border: 0;
   border-bottom: 1px solid #cad1d8;
   background-color: transparent;
-  padding: 3px;
+  padding: 5px;
 }
 
-.ui-form__field__input:focus ~ .ui-form__field-input__border {
-  width: 100%;
-  left: 0;
-  transition: 0.2s;
+.ui-form__field__input::placeholder {
+  color: #9aa5b1;
 }
 
 .ui-form__field-input__border {
@@ -592,75 +610,30 @@ Use to have the same effects without setting the classes
 }
 
 /** VERTICAL FIELDS (two lines) **/
+.ui-form__label--vertical {
+  margin-bottom: 0.5rem;
+}
+
 .ui-form__field--vertical {
   padding: 7px 0;
+  display: block;
 }
 
-.ui-form__label--vertical {
-  color: #1f2933;
+.ui-form__field--vertical:not(:last-of-type) {
+  margin-right: 0.5rem;
 }
 
-/*
-.ui-form__field-input--vertical {
-}
-*/
-/*******************/
-/* Chromatic scale */
-/*******************/
-/*********************/
-/* Meaningful colors */
-/*********************/
-.ui-form-v__field-group {
-  display: flex;
-  flex-direction: row;
-}
-
-.ui-form-v__field {
+.ui-form__field__textarea {
+  font-family: "Courier Sans";
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
+  min-height: 150px;
+  border: none;
+  border-bottom: 1px solid #cad1d8;
+  background-color: inherit;
 }
 
-.ui-form-v__field:not(:last-of-type) {
-  margin-right: 10px;
-}
-
-.ui-form-v__label {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
-}
-
-.ui-form-v__field-input {
-  color: #3f4d5a;
-}
-
-.ui-form-v__input {
-  color: #3f4d5a;
-  border: 1px solid #cad1d8;
-  border-radius: 5px;
-  padding: 0.3rem 0.5rem;
-  box-sizing: border-box;
-  width: 100%;
-}
-
-.ui-form-v__select {
-  color: #3f4d5a;
-  box-sizing: border-box;
-  padding: 0.3rem 0.5rem;
-  width: 100%;
-  border-radius: 5px;
-  border: 1px solid #cad1d8;
-  background-color: transparent;
-}
-
-.ui-form-v__textarea {
-  color: #3f4d5a;
-  width: 100%;
-  border-color: #cad1d8;
-  border-radius: 5px;
-  padding: 0.3rem 0.7rem;
-  box-sizing: border-box;
+.ui-form__field__textarea:focus {
+  border-bottom: none;
 }
 
 /*******************/
@@ -745,13 +718,78 @@ Use to have the same effects without setting the classes
   padding: 8px;
   border: 1px solid transparent;
   border-radius: 18px;
-  padding: 7px 8px;
+  padding: 4px;
   margin: 0;
 }
 .ui-icon__control:hover {
   color: #606d7b;
   background-color: #e5e8eb;
   border: 1px solid #e5e8eb;
+}
+
+.ui-icon-picker__trigger__container {
+  display: inline-flex;
+  align-items: center;
+}
+
+.ui-icon-picker__trigger__icon {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.ui-icon-picker__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ui-icon-picker__icon-tile {
+  padding: 5px;
+  margin: 7px;
+  border: 1px solid #e5e8eb;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.ui-icon-picker__icon-tile:hover {
+  border: 1px solid #1280bf;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.ui-icon-picker__icon-tile--selected {
+  border: 1px solid #81defd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.ui-icon-picker__icon-tile--list {
+  width: 22%;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+.ui-icon-picker__icon-tile__icon {
+  color: #7b8793;
+}
+
+.ui-icon-picker__icon-tile__icon:hover {
+  color: #1280bf;
+}
+
+.ui-icon-picker__icon-tile__icon--selected {
+  color: #2cb0ed;
+}
+
+.ui-icon-picker__icon-tile__description {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.ui-icon-picker__icon-tile__description__name {
+  color: #7b8793;
+}
+
+.ui-icon-picker__icon-tile__description__clean-name {
+  color: #cad1d8;
+  font-size: 0.7rem;
 }
 
 /*******************/
@@ -774,6 +812,15 @@ Use to have the same effects without setting the classes
   color: #606d7b;
   background-color: #e5e8eb;
   border: 1px solid #e5e8eb;
+}
+
+.ui-link {
+  color: #3f4d5a;
+  border-bottom: 1px solid #cad1d8;
+  text-decoration: none;
+}
+.ui-link:visited {
+  color: #3f4d5a;
 }
 
 /*******************/
@@ -970,21 +1017,6 @@ Use to have the same effects without setting the classes
   padding: 15px;
 }
 
-.ui-modal__control {
-  margin-left: 0.7rem;
-  margin: 3px 0 3px 3px;
-  cursor: pointer;
-  color: #9aa5b1;
-  padding: 8px;
-  border: 1px solid transparent;
-  border-radius: 18px;
-}
-.ui-modal__control:hover {
-  color: #606d7b;
-  background-color: #e5e8eb;
-  border: 1px solid #e5e8eb;
-}
-
 .ui-modal__content {
   overflow: auto;
   padding: 15px;
@@ -995,7 +1027,7 @@ Use to have the same effects without setting the classes
   height: calc(100% - 56px);
 }
 
-.ui-modal__content--header-footer {
+.ui-modal__content--header--footer {
   height: calc(100% - 121px);
 }
 
@@ -1063,6 +1095,11 @@ Use to have the same effects without setting the classes
   margin-top: 10px;
   margin-bottom: 10px;
   color: #1280bf;
+}
+
+.ui-page__header__controls-container {
+  display: flex;
+  align-items: center;
 }
 
 .ui-page__body {
@@ -1283,6 +1320,60 @@ Use to have the same effects without setting the classes
   display: block;
   margin: 7px 0;
   width: calc(100% - 50px);
+}
+
+.ui-side-panel {
+  z-index: 10;
+  position: fixed;
+  transition: 0.5s;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100vh;
+  background-color: #f5f7fa;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.ui-side-panel--visible {
+  box-shadow: -10px 0 20px 1px rgba(0, 0, 0, 0.15), -3px 0 6px 1px rgba(0, 0, 0, 0.1);
+}
+
+.ui-side-panel__container {
+  box-sizing: border-box;
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
+}
+
+.ui-side-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e8eb;
+  height: 46px;
+}
+
+.ui-side-panel__header__title {
+  padding: 7.5px;
+}
+
+.ui-side-panel__header__controls {
+  padding: 7.5px;
+}
+
+.ui-side-panel__content {
+  flex-grow: 1;
+  overflow: auto;
+  padding: 7.5px;
+}
+
+.ui-side-panel__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #e5e8eb;
+  padding: 7.5px;
 }
 
 /*******************/
