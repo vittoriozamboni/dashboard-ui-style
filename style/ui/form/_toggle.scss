@@ -13,6 +13,7 @@ $ui-form-toggle-height: $ui-form-toggle-width / 2 - $ui-form-toggle-padding / 2;
     width: $ui-form-toggle-width;
     height: $ui-form-toggle-height;
     border-radius: $ui-form-toggle-height / 2 + $ui-form-toggle-padding;
+    display: inline-block;
 }
 
 .ui-form__field__toggle--checked {
