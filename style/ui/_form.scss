@@ -26,6 +26,14 @@ $ui-form-field-padding: 7px 0 !default;
     .ui-form__label { width: 200px; }
 }
 
+/* LAYOUT */
+
+.ui-form__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
 /** HORIZONTAL FIELDS (default) **/
 
 .ui-form__field {
@@ -39,6 +47,13 @@ $ui-form-field-padding: 7px 0 !default;
     display: inline-block;
     padding-right: $ui-page-padding;
     font-weight: 500;
+}
+
+.ui-form__label__required {
+    color: $red-light;
+    font-size: 12px;
+    margin-top: -6px;
+    display: inline-block;
 }
 
 .ui-form__field-input {
@@ -62,6 +77,14 @@ $ui-form-field-padding: 7px 0 !default;
 
 .ui-form__field__input:focus ~ .ui-form__field-input__border {
     @extend %field-border-focus;
+}
+
+.ui-form__field__input--disabled {
+    background-color: $grey-light-l1;
+}
+
+.ui-form__field__input--invalid {
+    border: 1px solid $red-light;
 }
 
 .ui-form__field-input__border {
@@ -107,4 +130,12 @@ $ui-form-field-padding: 7px 0 !default;
     @extend %field-border-focus;
 }
 
+.ui-form__field__select {
+    background-color: transparent;
+    padding: 2px;
+}
 
+.ui-form__field__select--vertical {
+    height: 23px;
+    margin-top: 1px;
+}
