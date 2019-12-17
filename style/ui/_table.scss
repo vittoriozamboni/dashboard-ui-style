@@ -2,6 +2,7 @@
 
 .ui-table__container {
     position: relative;
+    width: 100%;
 }
 
 .ui-table__container * {
@@ -117,9 +118,13 @@
     vertical-align: bottom;
 }
 
-.ui-table__header__cell,
 .ui-table__body__cell {
     display: block;
+}
+
+.ui-table__header__cell {
+    display: inline-flex;
+    align-items: flex-start;
 }
 
 .ui-table__header__cell--single-line,
@@ -129,9 +134,20 @@
     text-overflow: ellipsis;
 }
 
+.ui-table__footer__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.ui-table__status-bar {
+    display: flex;
+    align-items: center;
+}
+
 .ui-table__page-controller__container {
     display: flex;
-    margin-top: 10px;
 }
 .ui-table__page-controller__container--expanded {
     justify-content: space-between;
@@ -147,10 +163,12 @@
 .ui-table__page-controller__page {
     display: inline-flex;
     border: 1px solid $grey-light-l1;
-    padding: 7px 10px;
+    padding: 4px;
     align-items: center;
     cursor: pointer;
     margin-left: 10px;
+    min-width: 30px;
+    justify-content: center;
 
     &:hover {
         background-color: $grey-light;

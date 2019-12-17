@@ -2,6 +2,8 @@
     padding: 0.3rem 0.4rem;
     border-radius: 11px;
     margin-bottom: 0.5rem;
+    display: inline-flex;
+    align-items: center;
 
     &:not(:last-of-type) {
         margin-right: 0.5rem;
