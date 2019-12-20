@@ -64,29 +64,29 @@ a.ui-button--small {
 }
 
 .ui-button--positive {
-    color: $neutral-light-l2;
-    background-color: $green;
+    color: $color-positive--opposite;
+    background-color: $color-positive;
 }
 .ui-button--positive:hover {
-    color: $neutral-light-l2;
-    background-color: $green-light-d2;
+    color: $color-positive--light--opposite;
+    background-color: $color-positive--light;
 }
 .ui-button--positive:disabled,
 .ui-button--positive:disabled:hover {
-    color: $neutral-light-l2;
-    background-color: $green-light-d1;
+    color: $color-positive--disabled--opposite;
+    background-color: $color-positive--disabled;
 }
 
 .ui-button--negative {
     color: $neutral-light-l2;
-    background-color: $red-l1;
+    background-color: $color-negative;
 }
 .ui-button--negative:hover {
     color: $neutral-light-l2;
-    background-color: $red-light-d2;
+    background-color: $color-negative--light;
 }
 .ui-button--negative:disabled,
 .ui-button--negative:disabled:hover {
     color: $neutral-light-l2;
-    background-color: $red-light;
+    background-color: $color-negative--disabled;
 }

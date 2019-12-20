@@ -139,3 +139,22 @@ $neutral-light-d1: $grey-light-d1;
 $neutral-light: $grey-light;
 $neutral-light-l1: $grey-light-l1;
 $neutral-light-l2: $grey-light-l2;
+
+$color-positive: $green;
+$color-positive--light: $green-light-d2;
+$color-positive--disabled: $green-light-d1;
+
+$color-positive--opposite: $neutral-light-l2;
+$color-positive--light--opposite: $neutral-light-l2;
+$color-positive--disabled--opposite: $neutral-light-l2;
+
+$color-negative: $red-l1;
+$color-negative--light: $red-light-d2;
+$color-negative--disabled: $red-light;
+
+$color-negative--opposite: $neutral-light-l2;
+$color-negative--light--opposite: $neutral-light-l2;
+$color-negative--disabled--opposite: $neutral-light-l2;
+
+$color-text: $neutral;
+$color-text-light: $neutral-light-d1;
