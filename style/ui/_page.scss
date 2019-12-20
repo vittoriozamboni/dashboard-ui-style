@@ -34,12 +34,13 @@ $ui-page-header-height: 68px !default;
 .ui-page__body {
     padding: $ui-page-padding;
     overflow: auto;
+    box-sizing: border-box;
 }
 
 .ui-page__body--full-height {
-    height: calc(100vh - #{($ui-page-padding * 2 + $ui-dashboard-header-height + $ui-dashboard-footer-height)});
+    height: calc(100vh - #{($ui-dashboard-header-height + $ui-dashboard-footer-height)});
 }
 .ui-page__body--full-height__with-page-header {
     padding-top: $ui-page-padding - 4;
-    height: calc(100vh - #{($ui-page-padding * 2 + $ui-dashboard-header-height + $ui-dashboard-footer-height + $ui-page-header-height)});
+    height: calc(100vh - #{($ui-dashboard-header-height + $ui-dashboard-footer-height + $ui-page-header-height)});
 }
