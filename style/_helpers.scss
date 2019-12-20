@@ -2,10 +2,14 @@
 .flex-container--baseline { display: flex; align-items: baseline; }
 .flex-container--middle { display: flex; align-items: center; }
 .flex-container--center { display: flex; justify-content: center; }
+.flex-container--spaced { display: flex; justify-content: space-between; }
+.flex-container--spaced--middle { display: flex; align-items: center; justify-content: space-between; }
 .flex-container--center-middle { display: flex; align-items: center; justify-content: center; }
 .block { display: block; }
 .iblock { display: inline-block; }
 .cursor-pointer { cursor: pointer; }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
 
 .w-10pc { width: 10% };
 .w-20pc { width: 20% };
