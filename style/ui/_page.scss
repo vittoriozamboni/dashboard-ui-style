@@ -2,6 +2,7 @@ $ui-page-padding: 15px !default;
 $ui-dashboard-header-height: 46px !default;
 $ui-dashboard-footer-height: 46px !default;
 $ui-page-header-height: 68px !default;
+$ui-page-header-margin-bottom: 4px !default;
 
 .ui-page__container {
     display: flex;
@@ -14,7 +15,7 @@ $ui-page-header-height: 68px !default;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 4px;
+    margin-bottom: $ui-page-header-margin-bottom;
 }
 .ui-page__header__container--with-shadow {
     box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.15);
@@ -42,5 +43,5 @@ $ui-page-header-height: 68px !default;
 }
 .ui-page__body--full-height__with-page-header {
     padding-top: $ui-page-padding - 4;
-    height: calc(100vh - #{($ui-dashboard-header-height + $ui-dashboard-footer-height + $ui-page-header-height)});
+    height: calc(100vh - #{($ui-dashboard-header-height + $ui-dashboard-footer-height + $ui-page-header-height + $ui-page-header-margin-bottom)});
 }
