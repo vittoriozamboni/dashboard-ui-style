@@ -123,7 +123,7 @@
 }
 
 .ui-table__header__cell {
-    display: inline-flex;
+    display: flex;
     align-items: flex-start;
 }
 
@@ -179,4 +179,75 @@
 }
 .ui-table__page-controller__page--navigator {
     color: $grey-light-d1;
+}
+
+.ui-table__toolbar__container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
+    transition: all 1s;
+}
+
+.ui-table__toolbar__container--open {
+    width: 100%;
+    align-items: stretch;
+}
+
+.ui-table__toolbar__controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.ui-table__toolbar__controls--open {
+    flex-direction: column;
+}
+
+.ui-table__toolbar__controls__control {
+    padding: 5px 5px 5px 0;
+}
+
+.ui-table__toolbar__elements {
+    display: none;
+}
+
+.ui-table__toolbar__elements--open {
+    display: flex;
+    flex-grow: 1;
+}
+
+.ui-table__search-bar__container {
+    padding: $ui-page-padding;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.ui-table__search-bar__search-field {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.ui-table__filters-bar {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+.ui-table__filters-bar__pills {
+    padding: $ui-page-padding / 2 0;
+}
+.ui-table__filters-bar__pills__pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid $primary;
+    font-size: 12px;
 }
