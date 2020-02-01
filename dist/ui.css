@@ -34,6 +34,10 @@
   height: 28px;
 }
 
+.ui-badge--clickable {
+  cursor: pointer;
+}
+
 .ui-block {
   background-color: white;
   overflow: auto;
@@ -495,6 +499,7 @@ Use to have the same effects without setting the classes
   width: 30px;
   height: 14px;
   border-radius: 9px;
+  display: inline-block;
 }
 
 .ui-form__field__toggle--checked {
@@ -555,7 +560,6 @@ Use to have the same effects without setting the classes
 .ui-form__container,
 .ui-section.ui-form__container {
   display: block;
-  overflow: hidden;
 }
 
 .ui-form__container--w100 .ui-form__label {
@@ -564,6 +568,13 @@ Use to have the same effects without setting the classes
 
 .ui-form__container--w200 .ui-form__label {
   width: 200px;
+}
+
+/* LAYOUT */
+.ui-form__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
 
 /** HORIZONTAL FIELDS (default) **/
@@ -578,6 +589,13 @@ Use to have the same effects without setting the classes
   display: inline-block;
   padding-right: 15px;
   font-weight: 500;
+}
+
+.ui-form__label__required {
+  color: #ff9999;
+  font-size: 12px;
+  margin-top: -6px;
+  display: inline-block;
 }
 
 .ui-form__field-input {
@@ -600,6 +618,14 @@ Use to have the same effects without setting the classes
   color: #9aa5b1;
 }
 
+.ui-form__field__input--disabled {
+  background-color: #e5e8eb;
+}
+
+.ui-form__field__input--invalid {
+  border: 1px solid #ff9999;
+}
+
 .ui-form__field-input__border {
   position: absolute;
   bottom: 0;
@@ -610,6 +636,11 @@ Use to have the same effects without setting the classes
 }
 
 /** VERTICAL FIELDS (two lines) **/
+.ui-form__field-input--vertical {
+  display: inline-flex;
+  align-items: center;
+}
+
 .ui-form__label--vertical {
   margin-bottom: 0.5rem;
 }
@@ -634,6 +665,16 @@ Use to have the same effects without setting the classes
 
 .ui-form__field__textarea:focus {
   border-bottom: none;
+}
+
+.ui-form__field__select {
+  background-color: transparent;
+  padding: 2px;
+}
+
+.ui-form__field__select--vertical {
+  height: 23px;
+  margin-top: 1px;
 }
 
 /*******************/
@@ -816,11 +857,19 @@ Use to have the same effects without setting the classes
 
 .ui-link {
   color: #3f4d5a;
-  border-bottom: 1px solid #cad1d8;
   text-decoration: none;
 }
 .ui-link:visited {
   color: #3f4d5a;
+}
+
+.ui-link__content {
+  border-bottom: 1px solid #cad1d8;
+  padding: 2px 0;
+}
+
+.ui-link__content--borderless {
+  border: none;
 }
 
 /*******************/
@@ -926,21 +975,21 @@ Use to have the same effects without setting the classes
   border-radius: 50%;
   border: 1px solid transparent;
   border-top-color: #3dbd92;
-  -webkit-animation: spin 1.5s linear infinite;
-  animation: spin 1.5s linear infinite;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
 }
 .ui-loader__inline:after {
   content: "";
   position: absolute;
-  top: 3px;
-  left: 3px;
-  right: 3px;
-  bottom: 3px;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
   border-radius: 50%;
   border: 1px solid transparent;
   border-top-color: #147b63;
-  -webkit-animation: spin 4.5s linear infinite;
-  animation: spin 4.5s linear infinite;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
 }
 @-webkit-keyframes spin {
   0% {
@@ -1105,15 +1154,16 @@ Use to have the same effects without setting the classes
 .ui-page__body {
   padding: 15px;
   overflow: auto;
+  box-sizing: border-box;
 }
 
 .ui-page__body--full-height {
-  height: calc(100vh - 122px);
+  height: calc(100vh - 92px);
 }
 
 .ui-page__body--full-height__with-page-header {
   padding-top: 11px;
-  height: calc(100vh - 190px);
+  height: calc(100vh - 164px);
 }
 
 .ui-section {
@@ -1350,7 +1400,6 @@ Use to have the same effects without setting the classes
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #e5e8eb;
   height: 46px;
 }
 
@@ -1384,6 +1433,7 @@ Use to have the same effects without setting the classes
 /*********************/
 .ui-table__container {
   position: relative;
+  width: 100%;
 }
 
 .ui-table__container * {
@@ -1504,9 +1554,13 @@ Use to have the same effects without setting the classes
   vertical-align: bottom;
 }
 
-.ui-table__header__cell,
 .ui-table__body__cell {
   display: block;
+}
+
+.ui-table__header__cell {
+  display: flex;
+  align-items: flex-start;
 }
 
 .ui-table__header__cell--single-line,
@@ -1516,9 +1570,20 @@ Use to have the same effects without setting the classes
   text-overflow: ellipsis;
 }
 
+.ui-table__footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.ui-table__status-bar {
+  display: flex;
+  align-items: center;
+}
+
 .ui-table__page-controller__container {
   display: flex;
-  margin-top: 10px;
 }
 
 .ui-table__page-controller__container--expanded {
@@ -1536,10 +1601,12 @@ Use to have the same effects without setting the classes
 .ui-table__page-controller__page {
   display: inline-flex;
   border: 1px solid #e5e8eb;
-  padding: 7px 10px;
+  padding: 4px;
   align-items: center;
   cursor: pointer;
   margin-left: 10px;
+  min-width: 30px;
+  justify-content: center;
 }
 .ui-table__page-controller__page:hover {
   background-color: #cad1d8;
@@ -1551,6 +1618,79 @@ Use to have the same effects without setting the classes
 
 .ui-table__page-controller__page--navigator {
   color: #9aa5b1;
+}
+
+.ui-table__toolbar__container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  width: auto;
+  transition: all 1s;
+}
+
+.ui-table__toolbar__container--open {
+  width: 100%;
+  align-items: stretch;
+}
+
+.ui-table__toolbar__controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ui-table__toolbar__controls--open {
+  flex-direction: column;
+}
+
+.ui-table__toolbar__controls__control {
+  padding: 5px 5px 5px 0;
+}
+
+.ui-table__toolbar__elements {
+  display: none;
+}
+
+.ui-table__toolbar__elements--open {
+  display: flex;
+  flex-grow: 1;
+}
+
+.ui-table__search-bar__container {
+  padding: 15px;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.ui-table__search-bar__search-field {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.ui-table__filters-bar {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.ui-table__filters-bar__pills {
+  padding: 7.5px 0;
+}
+
+.ui-table__filters-bar__pills__pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #1280bf;
+  font-size: 12px;
 }
 
 /*******************/
@@ -1603,6 +1743,8 @@ Use to have the same effects without setting the classes
   padding: 0.3rem 0.4rem;
   border-radius: 11px;
   margin-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
 }
 .ui-tag:not(:last-of-type) {
   margin-right: 0.5rem;
@@ -2492,6 +2634,30 @@ Use to have the same effects without setting the classes
   background-color: #f5f7fa;
 }
 
+.color-positive {
+  color: #207227;
+}
+
+.color-positive--light {
+  color: #57AE5B;
+}
+
+.color-positive--disabled {
+  color: #7BC47F;
+}
+
+.color-negative {
+  color: #d01124;
+}
+
+.color-negative--light {
+  color: #ef4e4e;
+}
+
+.color-negative--disabled {
+  color: #ff9999;
+}
+
 /* Font size */
 .ui-text__smaller {
   font-size: 12px;
@@ -2532,6 +2698,17 @@ Use to have the same effects without setting the classes
   justify-content: center;
 }
 
+.flex-container--spaced {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-container--spaced--middle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .flex-container--center-middle {
   display: flex;
   align-items: center;
@@ -2548,6 +2725,14 @@ Use to have the same effects without setting the classes
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
 }
 
 .w-10pc {
@@ -2584,6 +2769,10 @@ Use to have the same effects without setting the classes
 
 .w-90pc {
   width: 90%;
+}
+
+.w-100pc {
+  width: 100%;
 }
 
 .w-100 {
